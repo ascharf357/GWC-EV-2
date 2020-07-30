@@ -1,0 +1,38 @@
+.stories{
+  background-image:url("https://cdn.glitch.com/a68bf7b8-70ad-4e67-b611-f170a50efe2b%2Fclay-banks-5UdQ2SzmN1U-unsplash.jpg?v=1595969623470");
+}
+
+.image-four{
+  background-image:url("https://cdn.glitch.com/a68bf7b8-70ad-4e67-b611-f170a50efe2b%2Fclay-banks-2LEKXzFNitA-unsplash%20(1).jpg?v=1595977121979");
+}
+
+.image-five{
+  background-image:url("https://cdn.glitch.com/a68bf7b8-70ad-4e67-b611-f170a50efe2b%2Fmax-bender-2t_Fzgg8CXY-unsplash.jpg?v=1595977405997");
+}
+
+.image-six{
+  background-image:url("https://cdn.glitch.com/a68bf7b8-70ad-4e67-b611-f170a50efe2b%2Fehimetalor-akhere-unuabona-1ZNuzyPRIrY-unsplash.jpg?v=1595978074438");
+
+}
+.heading-home{
+  background-color:#6eafde;
+}
+
+#example{
+  background:#EDC9AF;
+}
+
+
+
+p{
+  color:white;
+  
+}
+
+.text-section {
+  background-color: black;
+  margin:0px;
+  text-align: center;
+  border:black;
+  
+}

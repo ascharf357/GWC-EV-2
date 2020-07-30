@@ -1,0 +1,312 @@
+/******************************************************/
+/************** CSS FOR TAKE-ACTION.HTML **************/
+/******************************************************/
+
+.page-header-action {
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+  background-color: #EDC9AF;
+  font-size:50px;
+ 
+  
+}
+
+
+
+body, html{
+  background:#EDC9AF;
+  border:none;
+  margin:0px;
+}
+
+/******************************************************/
+/***************** ACTION ITEM LIST *******************/
+/******************************************************/
+
+/* Flexbox container that holds all flex items */
+.flex-container-action {
+  display: flex;
+
+  position: absolute;
+  padding: 0.5em 0;
+  align-items: center;
+
+  left: 5%;
+  right: 5%;
+
+  margin: 5% ;
+  width: 90%;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: start;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+/* Left box under title; item in .flex-container */
+.action-info-container {
+  width: 100%;
+  margin-right: 5%;
+  margin-left: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 35px;
+  font-size: 16px;
+  flex-grow: 2;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+.action-info-container img{
+  width: 100%;
+}
+
+/* Right box under title; item in .flex-container */
+.action-list-container {
+  width: 75%;
+  padding: 35px;
+  margin: 5%;
+  flex-grow: 1;
+  background-color: #EDC9AF;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+/* Holds all elements related to the action item list; inside the action-list-container */
+#checklist {
+  background-color: black;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  border-width:20px;
+  border-style: solid;
+  border-color: #6eafde;
+  
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+#checklist:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  
+  
+}
+
+/* Header in the list container */
+#checklist-header {
+  text-align: center;
+  color: #6eafde;
+  letter-spacing: 1px;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+/* Intructions inside the list container */
+#instructions {
+  font: 14px "Roboto", sans-serif;
+  text-align: center;
+  font-style: italic;
+  color: #6eafde;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+  
+}
+
+/* The div container for the unordered action item list */
+#my-list {
+  padding: 10px 0 0 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Styling for individual action list items */
+#my-list li {
+  cursor: pointer;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 8px; 
+  padding-left: 35px;
+  position: relative;
+  list-style-type: none;
+  transition: 0.2s;
+  width: 85%;
+  color: white;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+/* Styling for the check squares added at the beginning of each list item */
+#my-list li::before {
+  content: "";
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  
+  top: 15px;
+  left: 13px;
+  height: 10px;
+  width: 10px;
+}
+/* 
+A note on the checkbox: This is actually just a neat trick. Before the 
+item is clicked, the CSS file inserts a blank space through the content: "";
+property. You can draw a border around this blank space so it appears like 
+a box. After the item is clicked, new CSS rules are applied that remove the 
+border from two sides and rotate the blank space by 45 degress so it looks 
+like a checkmark!
+*/
+
+/* Change background color when cursor hovers over list items */
+#my-list li:hover {
+  background:  none;
+  color: #6eafde;
+}
+
+/* Change check square color when cursor hovers over */
+#my-list li:hover::before {
+  border-color: #6eafde;
+  border-style: solid;
+}
+
+/* When marked complete (i.e. clicked on) add strikethrough */
+#my-list li.all-done {
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#my-list li.all-done::before {
+  content: "";
+  position: absolute;
+  border-color: #6eafde;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 5px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+
+
+/******************************************************/
+/** CHANGE TAKE-ACTION.HTML CSS BASED ON SCREEN SIZE **/
+/******************************************************/
+
+/* IF THE SCREEN IS ~~700 OR LESS~~ IMPLEMENT THESE RULES */
+
+@media only screen and (max-width: 700px) {
+
+  .flex-container-action {
+    flex-wrap: wrap;
+  }
+}
+
+/* IF THE SCREEN IS ~~701 OR MORE~~ IMPLEMENT THESE RULES */
+
+@media only screen and (min-width: 701px) {
+  
+  .flex-container-action {
+    flex-wrap: wrap;
+  }
+
+  .left-container {
+    width: 50%;
+    margin-right: 10%;
+  }
+}
+
+/* IF THE SCREEN IS ~~1000 OR MORE~~ IMPLEMENT THESE RULES */
+@media only screen and (min-width: 1000px) {
+
+  .flex-container-action {
+    flex-wrap: nowrap;
+  }
+}
+
+/* IF THE SCREEN IS ~~1250 OR MORE~~ IMPLEMENT THESE RULES */
+@media only screen and (min-width: 1250px) {
+  
+  .flex-container-action {
+    flex-wrap: nowrap;
+  }
+
+  #list-container {
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px 20px 40px 40px;
+  }
+
+  .left-container {
+    width: 50%;
+    margin-right: 10%;
+  }
+}
+
+p{
+  color:white;
+}
+
+p1{
+  text-align: center;
+  align:center;
+  font-size:20px;
+  color:black;
+  
+}
+
+
+
+
+#balloon {
+
+  position: absolute;
+  top:-1162px;
+  float:left;
+
+}
+
+#balloons{
+  /*right:100px;*/
+  right:100px;
+  top:-1162px;
+
+  position: absolute;
+
+}
+
+#resources{
+  color:black;
+  padding-left:300px;
+  font-size:20px;
+  line-height: 40px;
+}
+
+
+h3{
+  color:#6eafde;
+  font-size:50px;
+  text-align:center;
+}
+
+
+@keyframes magnified{
+  0%{
+    transform: scale(1.05);
+  }
+  30%{
+    tranfrom:scale(1.1);
+  }
+  50%{
+    transform:scale(1.15);
+  }
+  70%{
+    transform: scale(1.15);
+  }
+  100%{
+    transform: scale(1.1);
+  }  
+}
+#a:hover, #b:hover, #c:hover, #c:hover, #d:hover, #e:hover, #f:hover{
+  animation:  magnified 5s ;
+}
+
